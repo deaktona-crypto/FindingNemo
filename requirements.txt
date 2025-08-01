@@ -3,3 +3,4 @@ pillow
 folium
 streamlit-folium
 ultralytics
+opencv-python-headless
