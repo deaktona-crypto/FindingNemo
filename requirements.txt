@@ -2,5 +2,5 @@ streamlit
 pillow
 folium
 streamlit-folium
-ultralytics
-opencv-python-headless
+ultralytics==8.2.103
+opencv-python-headless==4.8.1.78
