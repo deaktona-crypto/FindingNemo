@@ -9,8 +9,8 @@ import os
 # -----------------------------
 # Page Config
 # -----------------------------
-st.set_page_config(page_title="ReefLog – FindingNemo", page_icon="🌊", layout="centered")
-st.title("🐠 FindingNemo – Protect Marine Life")
+st.set_page_config(page_title="ReefLog – FindingNemo", page_icon="", layout="centered")
+st.title(" FindingNemo – Protect Marine Life")
 st.write("Upload a photo of marine life or pollution, and our AI will try to identify it!")
 
 # -----------------------------
@@ -26,12 +26,12 @@ model = load_model()
 # -----------------------------
 # Image Upload & Detection
 # -----------------------------
-uploaded_file = st.file_uploader("📷 Upload an image", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader(" Upload an image", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption="Uploaded Image", use_container_width=True)
-    st.write("⏳ Analyzing image with AI model...")
+    st.write(" Analyzing image with AI model...")
 
     # Save image temporarily
     with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as temp_file:
@@ -50,9 +50,9 @@ if uploaded_file is not None:
         detected_items.append(f"{labels[cls_id]} ({conf*100:.1f}%)")
 
     if detected_items:
-        st.success("✅ Detected: " + ", ".join(detected_items))
+        st.success("Detected: " + ", ".join(detected_items))
     else:
-        st.warning(⚠️ No objects detected.")
+        st.warning(" No objects detected.")
 
     # Show detection image
     st.image(results[0].plot(), caption="Detection Results", use_container_width=True)
