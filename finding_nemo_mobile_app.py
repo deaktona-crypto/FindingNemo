@@ -19,7 +19,7 @@ st.write("Upload a photo of marine life or pollution, and our AI will try to ide
 @st.cache_resource
 def load_model():
     # You can replace yolov8n.pt with your custom-trained model (marine_best.pt)
-    return YOLO("yolov8n.pt")
+    return YOLO("best.pt")
 
 model = load_model()
 
